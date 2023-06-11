@@ -1,0 +1,41 @@
+####
+# La methode opacityTabcontrolDroid de la classe MyExtClass, permet de rendre Transparent, le fond de tabcontrolDroid  
+# contenant les tabpage 1, 2 et 3
+#
+
+#$code = @"
+#public static class MyExtClass {
+#	public static int opacityTabcontrolDroid ()	{
+#		$tabcontrolDroid.ColorScheme.TabBackground = Color.Transparent;
+#		$tabcontrolDroid.ColorScheme.TabBackground2 = Color.Transparent;
+#		$tabcontrolDroid.ColorScheme.TabBackground3 = Color.Transparent;
+#		$tabcontrolDroid.BackColor = Color.Transparent;
+#	}
+#} 
+#"@
+#add-type -TypeDefinition $code
+
+
+
+#####===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#
+# Exemple
+#
+#$code=@'
+#public static class MyExtClass {
+#    public static int NumberOfEs (this string TheString)
+#    {
+#        return TheString.Length - TheString.Replace ("e", "").Length;
+#    }
+#}
+#'@
+#add-type -TypeDefinition $code
+#
+#[MyExtClass]::NumberOfEs('hello')
+#
+####
+## Ce qu'il faudra mettre à l'intérieur de MyExtClass :
+####
+# TabControl.ColorScheme.TabBackground = Color.Transparent;
+# TabControl.ColorScheme.TabBackground2 = Color.Transparent;
+# TabControl.BackColor = Color.Transparent;
+#####===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#===#
